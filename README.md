@@ -1,2 +1,2 @@
 # colmayor-landings
-colmayor-landings
+colmayor-landings .
