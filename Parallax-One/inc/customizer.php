@@ -369,6 +369,26 @@ function parallax_one_customize_register( $wp_customize ) {
 	);
 
 	/**
+	 * Biotecnologia Layer one
+	 */
+	$wp_customize->add_setting(
+		'paralax_one_first_layer', array(
+			'default'           => parallax_get_file( '/images/biotecnologia-background1.jpg' ),
+			'sanitize_callback' => 'esc_url',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'paralax_one_first_layer', array(
+				'label'    => esc_html__( 'First layer', 'parallax-one' ),
+				'section'  => 'header_image',
+				'priority' => 4,
+			)
+		)
+	);
+
+	/**
 	 * Layer two
 	 */
 	$wp_customize->add_setting(
@@ -387,6 +407,28 @@ function parallax_one_customize_register( $wp_customize ) {
 			)
 		)
 	);
+
+	/**
+	 *Biotecnologia Layer two
+	 */
+	$wp_customize->add_setting(
+		'biotecnologia_paralax_one_second_layer', array(
+			'default'           => parallax_get_file( '/images/biotecnologia-background2.jpg' ),
+			'sanitize_callback' => 'esc_url',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'biotecnologia_paralax_one_second_layer', array(
+				'label'    => esc_html__( 'Second layer', 'parallax-one' ),
+				'section'  => 'header_image',
+				'priority' => 5,
+			)
+		)
+	);
+
+
 
 	require_once( 'alpha-control/parallax-one-alpha-control.php' );
 
